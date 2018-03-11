@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="LayoutSearchTheme">
+        <item name="android:background">#FFFFFFFF</item>
+    </style>
+
+    <style name="SearchTheme">
+        <item name="android:textColorHint">@color/colorTextHint</item>
+        <item name="android:textCursorDrawable">@drawable/color_cursor</item>
+        <item name="android:hint">@string/search</item>
+        <item name="android:drawableLeft">@drawable/ic_search_gray_24dp</item>
+        <item name="android:drawablePadding">@dimen/padding_drawable_search</item>
+    </style>
+
+    <style name="ThemeButton">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+</resources>
