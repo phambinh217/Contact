@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -31,6 +31,11 @@
 
     <style name="ThemeButton">
         <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:colorButtonNormal" tools:targetApi="lollipop">@color/colorBackgroundButton</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">serif</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
 </resources>

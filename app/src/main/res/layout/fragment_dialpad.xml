@@ -1,16 +1,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.example.hongs.contact.binhpham.fragment.DialpadFragment">
+    android:background="@color/colorBackgroundButton"
+    tools:context="com.example.hongs.contact.binhpham.fragments.DialpadFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F00"
-        android:layout_weight="0.6">
+        android:layout_weight="0.8">
 
     </LinearLayout>
 
@@ -18,31 +18,177 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="1"
-        android:layout_weight="0.3">
+        android:layout_weight="0.2"
+        android:background="@color/colorBackgroundButton"
+        android:weightSum="1">
 
-        <EditText
+        <TextView
             android:id="@+id/edit_number_phone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:paddingRight="@dimen/padding_drawable_search"
+            android:drawableRight="@drawable/ic_backspace_gray_24dp"
+            android:drawablePadding="@dimen/padding_drawable_search"
+            android:textColor="@color/colorText"
+            tools:ignore="RtlHardcoded,RtlSymmetry,TextFields" />
 
         <LinearLayout
             android:id="@+id/layout_dialpad"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/edit_number_phone"
             android:layout_above="@+id/floating_call"
+            android:layout_below="@+id/edit_number_phone"
+            android:background="@color/colorBackgroundButton"
+            android:paddingLeft="@dimen/margin_floating_bottom"
+            android:paddingRight="@dimen/margin_floating_bottom"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
 
                 <Button
+                    android:id="@+id/btn_7"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:theme="@style/ThemeButton"/>
+                    android:layout_height="match_parent"
+                    android:text="@string/num_7"
+                    android:layout_weight="1"
+                    android:theme="@style/ThemeButton"
+                    tools:ignore="ButtonStyle,NestedWeights" />
+
+                <Button
+                    android:id="@+id/btn_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/num_8"
+                    android:layout_weight="1"
+                    android:theme="@style/ThemeButton"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/btn_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/num_9"
+                    android:layout_weight="1"
+                    android:theme="@style/ThemeButton"
+                    tools:ignore="ButtonStyle" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <Button
+                    android:id="@+id/btn_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/num_4"
+                    android:layout_weight="1"
+                    android:theme="@style/ThemeButton"
+                    tools:ignore="ButtonStyle,NestedWeights" />
+
+                <Button
+                    android:id="@+id/btn_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/num_5"
+                    android:layout_weight="1"
+                    android:theme="@style/ThemeButton"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/btn_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/num_6"
+                    android:layout_weight="1"
+                    android:theme="@style/ThemeButton"
+                    tools:ignore="ButtonStyle" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <Button
+                    android:id="@+id/btn_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/num_1"
+                    android:layout_weight="1"
+                    android:theme="@style/ThemeButton"
+                    tools:ignore="ButtonStyle,NestedWeights" />
+
+                <Button
+                    android:id="@+id/btn_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/num_2"
+                    android:layout_weight="1"
+                    android:theme="@style/ThemeButton"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/btn_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/num_3"
+                    android:layout_weight="1"
+                    android:theme="@style/ThemeButton"
+                    tools:ignore="ButtonStyle" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <Button
+                    android:id="@+id/btn_sao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/num_sao"
+                    android:layout_weight="1"
+                    android:theme="@style/ThemeButton"
+                    tools:ignore="ButtonStyle,NestedWeights" />
+
+                <Button
+                    android:id="@+id/btn_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/num_0"
+                    android:layout_weight="1"
+                    android:theme="@style/ThemeButton"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/btn_thang"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/num_thang"
+                    android:layout_weight="1"
+                    android:theme="@style/ThemeButton"
+                    tools:ignore="ButtonStyle" />
 
             </LinearLayout>
 
@@ -55,9 +201,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            app:backgroundTint="@color/colorPrimary"
+            android:layout_marginBottom="@dimen/margin_floating_bottom"
+            android:layout_marginTop="@dimen/margin_floating_bottom"
             android:src="@drawable/ic_phone_white_24dp"
-            android:layout_marginBottom="@dimen/margin_floating_bottom"/>
+            app:backgroundTint="@color/colorPrimary" />
 
     </RelativeLayout>
 

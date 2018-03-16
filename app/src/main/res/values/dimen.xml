@@ -8,4 +8,15 @@
     <dimen name="padding_drawable_search">16dp</dimen>
     <dimen name="padding_left_toolbar">16dp</dimen>
     <dimen name="margin_floating_bottom">16dp</dimen>
+    <dimen name="padding_layout">16dp</dimen>
+    <dimen name="size_avatar">52dp</dimen>
+    <dimen name="app_bar_height">270dp</dimen>
+
+    <dimen name="padding_layout_main">32dp</dimen>
+    <dimen name="margin_text_name_profile">52dp</dimen>
+
+    <!--sp-->
+    <dimen name="button_text_size">35sp</dimen>
+    <dimen name="text_call_name">20sp</dimen>
+    <dimen name="text_name_profile">20sp</dimen>
 </resources>

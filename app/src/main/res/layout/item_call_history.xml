@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent"
+    android:padding="@dimen/padding_layout">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_image_avatar"
+        android:layout_width="@dimen/size_avatar"
+        android:layout_height="@dimen/size_avatar"
+        android:layout_marginRight="@dimen/padding_layout"
+        android:src="@drawable/ic_person_white_24dp"
+        android:layout_marginEnd="@dimen/padding_layout" />
+    
+    <TextView
+        android:id="@+id/text_call_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
+        android:layout_toRightOf="@+id/circle_image_avatar"
+        android:text="Phạm Hồng Sơn"
+        android:textSize="@dimen/text_call_name"
+        android:layout_toLeftOf="@+id/image_button_call"
+        android:layout_toEndOf="@+id/circle_image_avatar"
+        android:layout_toStartOf="@+id/image_button_call" />
+
+    <ImageView
+        android:id="@+id/image_call_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_call_name"
+        android:layout_toEndOf="@+id/circle_image_avatar"
+        android:layout_toRightOf="@+id/circle_image_avatar"
+        android:layout_marginRight="@dimen/padding_layout"
+        android:visibility="gone"
+        android:src="@drawable/ic_call_made_green_24dp"
+        android:layout_marginEnd="@dimen/padding_layout" />
+
+    <TextView
+        android:id="@+id/text_call_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_call_name"
+        android:layout_toEndOf="@+id/image_call_type"
+        android:layout_toRightOf="@+id/image_call_type"
+        android:layout_alignTop="@id/image_call_type"
+        android:layout_alignBottom="@id/image_call_type"
+        android:layout_toLeftOf="@+id/image_button_call"
+        android:text="15/03/2018"
+        android:layout_toStartOf="@+id/image_button_call" />
+
+    <ImageButton
+        android:id="@+id/image_button_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/padding_layout"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_call_green_24dp"/>
+
+</RelativeLayout>

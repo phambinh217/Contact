@@ -11,6 +11,7 @@
         android:layout_height="match_parent">
 
         <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -36,6 +37,7 @@
                         android:layout_height="wrap_content"
                         android:imeOptions="actionSearch"
                         android:inputType="text"
+                        android:paddingLeft="@dimen/padding_drawable_search"
                         android:selectAllOnFocus="false"
                         android:textColor="@color/colorText"
                         android:theme="@style/SearchTheme" />
@@ -56,6 +58,7 @@
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar_layout"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     </RelativeLayout>

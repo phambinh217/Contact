@@ -8,15 +8,20 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.EditText;
 
-import com.example.hongs.contact.binhpham.fragment.DialpadFragment;
+import com.example.hongs.contact.binhpham.fragments.DialpadFragment;
+import com.example.hongs.contact.binhpham.fragments.HistoryFragment;
+import com.example.hongs.contact.hongsonvx1.fragments.ContactFragment;
+import com.example.hongs.contact.hongsonvx1.fragments.ProfileFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Toolbar toolbar;
     private TabLayout tabLayout;
     private EditText editTextSearch;
 
@@ -25,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         editTextSearch = findViewById(R.id.edit_search);
@@ -36,6 +41,33 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
+
+        viewPager.setCurrentItem(2);
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                if (tab.getPosition() == 0) {
+                    toolbar.setVisibility(View.GONE);
+                    tabLayout.setVisibility(View.VISIBLE);
+                } else if (tab.getPosition() == 3) {
+                    toolbar.setVisibility(View.GONE);
+                    tabLayout.setVisibility(View.GONE);
+                }else {
+                    tabLayout.setVisibility(View.VISIBLE);
+                    toolbar.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
     }
 
     private void setupTabIcons() {
@@ -55,9 +87,9 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new DialpadFragment(), "DIALPAD");
-        adapter.addFrag(new DialpadFragment(), "HISTORY");
-        adapter.addFrag(new DialpadFragment(), "CONTACT");
-        adapter.addFrag(new DialpadFragment(), "ACCOUNT");
+        adapter.addFrag(new HistoryFragment(), "HISTORY");
+        adapter.addFrag(new ContactFragment(), "CONTACT");
+        adapter.addFrag(new ProfileFragment(), "ACCOUNT");
         viewPager.setAdapter(adapter);
     }
 
@@ -86,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-
             // return null to display only the icon
             return null;
         }
