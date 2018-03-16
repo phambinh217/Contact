@@ -41,6 +41,7 @@ public class RecyclerAdapterContact extends RecyclerView.Adapter<RecyclerAdapter
         View view = layoutInflater.inflate(R.layout.item_call_history, parent, false);
 
         return new RecyclerAdapterContact.RecyclerViewHolder(view);
+
     }
 
     @Override
